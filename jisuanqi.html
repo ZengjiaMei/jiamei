@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>购物简易计算机</title>
+<script type="text/javascript">
+function compute(obj){
+            var num1,num2,result;
+            num1 = parseFloat(document.aa.text.value);
+            num2 = parseFloat(document.aa.text2.value);
+            switch(obj){
+                case "+":
+                result = num1 + num2;
+                break;
+                case "-":
+                result = num1 - num2;
+                break;
+                case "*":
+                result = num1 * num2;
+                break;
+                case "/":
+                if(num2!=0)
+                result = num1 / num2;
+                else
+                result = "除数不能为0，请重新输入!";
+                break;
+            }
+            document.aa.jieg.value=result;
+        }
+</script>
+ </head>
+ <body>
+ <center>
+ <table>
+  <tr> 
+  <td colspan="4" align="center">购物简易计算器</td>
+  </tr>
+  <form name="aa">
+    <tr>
+      <td>第一个数</td>
+      
+    <td colspan="3"><input type="text" name="text"></td>
+    </tr>
+      <tr>
+        <td>第二个数</td>
+    <td colspan="3"><input type="text" name="text2"></td>
+       </tr>
+        <tr>
+          <td><input type="button" value="+" style="width:40px;margin-left:10px;" onclick="compute('+')"></td>
+          <td><input type="button" value="—" style="width: 40px;margin-right:10px;" onclick="compute('-')"></td>
+          <td><input type="button" value="X" style="width:40px;margin-right:10px;" onclick="compute('*')"></td>
+          <td><input type="button" value="÷" style="width:40px;margin-right:10px;" onclick="compute('/')"></td>
+        </tr>
+ <tr>
+            <td>计算结果</td>
+    <td colspan="3"><input type="text" name="jieg" /></td>
+       </tr>
+      </form>
+  </table>
+  </center>
+ </body>
+</html>
